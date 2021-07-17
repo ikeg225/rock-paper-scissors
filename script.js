@@ -9,7 +9,7 @@ function capitalize(word) {
 }
 
 function playRound(input) {
-    let weapon = capitalize(playerSelection);
+    let weapon = capitalize(input);
     if (computerPlay() == weapon) {
         return "It's a Tie!"
     }else if (computerPlay() == "Rock") {
@@ -37,6 +37,25 @@ function playRound(input) {
 
 }
 
-const playerSelection = "rock";
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+function game() {
+    let botPoints = 0;
+    let playerPoints = 0;
+    for (let i = 1; i < 6; i++) {
+        let weapon = prompt("Choose your weapon: Rock, Paper, or Scissors! (Round " + i + ")");
+        let result = playRound(weapon);
+        if (result.includes("Win")) {
+            playerPoints++;
+        } else {
+            botPoints++;
+        }
+        console.log(result)
+
+    }
+    if (playerPoints > botPoints) {
+        console.log("Game Over - You Win!")
+    } else {
+        console.log("Game Over - You Lose!")
+    }
+}
+
+game()
