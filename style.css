@@ -1,0 +1,38 @@
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+#first {
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2)
+}
+
+.spacing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#options {
+    padding: 20px 0px;
+}
+
+#options button {
+    font-size: 20px;
+    background-color: transparent;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#options button:hover {
+    background-color: black;
+    color: white;
+}
