@@ -24,7 +24,7 @@
     padding: 20px 0px;
 }
 
-#options button {
+button {
     font-size: 20px;
     background-color: transparent;
     border: 2px solid black;
@@ -32,7 +32,7 @@
     border-radius: 5px;
 }
 
-#options button:hover {
+button:hover {
     background-color: black;
     color: white;
 }
