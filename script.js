@@ -1,5 +1,5 @@
 let human = 0;
-let robot = 0;
+let rbtScore = 0;
 let round = 0;
 
 const buttons = document.querySelectorAll('button');
@@ -23,7 +23,7 @@ function playRound(input) {
         }
         else {
             document.getElementById("winLose").innerHTML = "You Lose! Rock beats Scissors.";
-            robot++;
+            rbtScore++;
         }
     } else if (robot == "Paper") {
         if (input == "Scissors"){
@@ -32,7 +32,7 @@ function playRound(input) {
         }
         else {
             document.getElementById("winLose").innerHTML = "You Lose! Paper beats Rock.";
-            robot++;
+            rbtScore++;
         }
     } else {
         if (input == "Rock"){
@@ -41,7 +41,7 @@ function playRound(input) {
         }
         else {
             document.getElementById("winLose").innerHTML = "You Lose! Scissors beats Paper.";
-            robot++;
+            rbtScore++;
         }
     }
 
@@ -49,9 +49,9 @@ function playRound(input) {
 
 function update() {
     document.getElementById("round").innerHTML = "Round: " + round;
-    document.getElementById("winRate").innerHTML = "Win Rate: " + human / round + "%";
+    document.getElementById("winRate").innerHTML = "Win Rate: " + Math.round((human / (human + rbtScore)) * 100) + "%";
     document.getElementById("human").innerHTML = "Human: " + human;
-    document.getElementById("robot").innerHTML = "Robot: " + robot;
+    document.getElementById("robot").innerHTML = "Robot: " + rbtScore;
 }
 
 
